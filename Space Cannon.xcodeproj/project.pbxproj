@@ -67,7 +67,6 @@
 		A0EFA8DD19B6D7E100D1110B /* CannonBallExplosionSmall.sks in Resources */ = {isa = PBXBuildFile; fileRef = A0EFA8DC19B6D7E100D1110B /* CannonBallExplosionSmall.sks */; };
 		A0EFA8E019B6D81200D1110B /* SKAction+ATWSound.m in Sources */ = {isa = PBXBuildFile; fileRef = A0EFA8DF19B6D81200D1110B /* SKAction+ATWSound.m */; };
 		A0FB0B0C1971DBBD0096AF4E /* LifeBarExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = A0FB0B0B1971DBBD0096AF4E /* LifeBarExplosion.sks */; };
-		A0FB0B101971E71A0096AF4E /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = A0FB0B0E1971E71A0096AF4E /* spark.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,7 +151,6 @@
 		A0EFA8DE19B6D81200D1110B /* SKAction+ATWSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SKAction+ATWSound.h"; path = "space-cannon-assets/SKAction+ATWSound.h"; sourceTree = "<group>"; };
 		A0EFA8DF19B6D81200D1110B /* SKAction+ATWSound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SKAction+ATWSound.m"; path = "space-cannon-assets/SKAction+ATWSound.m"; sourceTree = "<group>"; };
 		A0FB0B0B1971DBBD0096AF4E /* LifeBarExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = LifeBarExplosion.sks; path = ../LifeBarExplosion.sks; sourceTree = "<group>"; };
-		A0FB0B0E1971E71A0096AF4E /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spark.png; path = ../../spark.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -348,7 +346,6 @@
 			isa = PBXGroup;
 			children = (
 				A0EFA8DC19B6D7E100D1110B /* CannonBallExplosionSmall.sks */,
-				A0FB0B0E1971E71A0096AF4E /* spark.png */,
 				A023382B196CF4B700A421CF /* HaloExplosion.sks */,
 				A084D0A6196F97480028F85B /* testExplosion.sks */,
 				A0FB0B0B1971DBBD0096AF4E /* LifeBarExplosion.sks */,
@@ -455,7 +452,6 @@
 				A0AA346819A31B63004C3B19 /* ShieldUp.caf in Resources */,
 				A0DBCD82191EBBBD00B8B292 /* Ball@2x.png in Resources */,
 				A0DBCD53191EBAA400B8B292 /* Images.xcassets in Resources */,
-				A0FB0B101971E71A0096AF4E /* spark.png in Resources */,
 				A0DBCD7F191EBBBD00B8B292 /* Ammo3@2x.png in Resources */,
 				A0A4648419A05D2000281233 /* HaloBomb@2x.png in Resources */,
 				A0730C961974E6230065BC8F /* PlayButton@2x.png in Resources */,
