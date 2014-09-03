@@ -31,7 +31,7 @@
         _scoreboard.position = CGPointMake(0, 70);
         [self addChild:_scoreboard];
         
-        _playButton = [SKSpriteNode spriteNodeWithImageNamed:@"NewEasyButton"];
+        _playButton = [SKSpriteNode spriteNodeWithImageNamed:@"PlayButton"];
         _playButton.name = @"Play";
         _playButton.position = CGPointMake(0, 0);
         [self addChild:_playButton];
@@ -41,10 +41,10 @@
         _musicButton.position = CGPointMake(90, 0);
         [self addChild:_musicButton];
         
-        _testButton = [SKSpriteNode spriteNodeWithImageNamed:@"NewEasyButtonAlt"];
-        _testButton.name = @"Test";
-        _testButton.position = CGPointMake(0, -50);
-        [self addChild:_testButton];
+//        _testButton = [SKSpriteNode spriteNodeWithImageNamed:@"NewEasyButtonAlt"];
+//        _testButton.name = @"Test";
+//        _testButton.position = CGPointMake(0, -50);
+//        [self addChild:_testButton];
         
         _scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"DIN Alternate"];
         _scoreLabel.fontSize = 30;
