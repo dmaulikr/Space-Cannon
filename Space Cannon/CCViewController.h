@@ -8,12 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
-#import <iAd/iAD.h>
+#import <iAd/iAd.h>
 
 
 @interface CCViewController : UIViewController <ADBannerViewDelegate> {
     
-    ADBannerView *adView;
+//    ADBannerView *adView;
+        ADBannerView *_adBanner;
+    BOOL _bannerIsVisible;
+
 }
 
 @property BOOL bannerIsVisible;

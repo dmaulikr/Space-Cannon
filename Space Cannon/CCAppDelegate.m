@@ -102,14 +102,14 @@ static BOOL isAudioSessionActive = NO;
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
     NSError *error = nil;
     
-    NSLog(@"%s isOtherAudioPlaying: %d, oldCategory: %@ withOptions: %d", __FUNCTION__, audioSession.otherAudioPlaying, audioSession.category, audioSession.categoryOptions);
+//    NSLog(@"%s isOtherAudioPlaying: %d, oldCategory: %@ withOptions: %d", __FUNCTION__, audioSession.otherAudioPlaying, audioSession.category, audioSession.categoryOptions);
     
     [audioSession setCategory:AVAudioSessionCategoryAmbient error:&error];
     
     if (!error) {
         [self activateAudioSession];
     } else {
-        NSLog(@"%s setCategory Error: %@", __FUNCTION__, error);
+//        NSLog(@"%s setCategory Error: %@", __FUNCTION__, error);
     }
     
     if (isAudioSessionActive) {
@@ -129,7 +129,7 @@ static BOOL isAudioSessionActive = NO;
     
     [audioSession setActive:YES error:&error];
     
-    NSLog(@"%s [Main:%d] isActive: %d, isOtherAudioPlaying: %d, AVAudioSession Error: %@", __FUNCTION__, [NSThread isMainThread], isAudioSessionActive, audioSession.isOtherAudioPlaying, error);
+//    NSLog(@"%s [Main:%d] isActive: %d, isOtherAudioPlaying: %d, AVAudioSession Error: %@", __FUNCTION__, [NSThread isMainThread], isAudioSessionActive, audioSession.isOtherAudioPlaying, error);
     
     if (error) {
         // It's not enough to setActive:YES
@@ -148,7 +148,7 @@ static BOOL isAudioSessionActive = NO;
         isAudioSessionActive = NO;
     }
     
-    NSLog(@"%s isActive: %d, AVAudioSession Activated with category: %@ Error: %@", __FUNCTION__, isAudioSessionActive, [audioSession category], error);
+//    NSLog(@"%s isActive: %d, AVAudioSession Activated with category: %@ Error: %@", __FUNCTION__, isAudioSessionActive, [audioSession category], error);
 }
 
 // Informs if SpriteKit should play sounds (SpriteKit BUG)
@@ -181,7 +181,7 @@ static BOOL isAudioSessionActive = NO;
     //[audioSession setActive:NO error:&error];
     [audioSession setActive:NO withOptions:AVAudioSessionSetActiveOptionNotifyOthersOnDeactivation error:&error];
     
-    NSLog(@"%s isActive: %d, AVAudioSession Error: %@", __FUNCTION__, isAudioSessionActive, error);
+//    NSLog(@"%s isActive: %d, AVAudioSession Error: %@", __FUNCTION__, isAudioSessionActive, error);
     
     if (error) {
         // It's not enough to setActive:NO
@@ -195,7 +195,7 @@ static BOOL isAudioSessionActive = NO;
 }
 
 - (void)observeAudioSessionNotifications:(BOOL)observe {
-    NSLog(@"%s YES: %d", __FUNCTION__, observe);
+//    NSLog(@"%s YES: %d", __FUNCTION__, observe);
     
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
@@ -242,7 +242,7 @@ static BOOL isAudioSessionActive = NO;
             break;
     }
     
-    NSLog(@"%s [Main:%d] [Active: %d] AVAudioSession Interruption: %@ withInfo: %@", __FUNCTION__, [NSThread isMainThread], isAppActive, notification.object, notification.userInfo);
+//    NSLog(@"%s [Main:%d] [Active: %d] AVAudioSession Interruption: %@ withInfo: %@", __FUNCTION__, [NSThread isMainThread], isAppActive, notification.object, notification.userInfo);
 }
 
 - (void)handleAudioSessionRouteChange:(NSNotification*)notification {
@@ -253,42 +253,42 @@ static BOOL isAudioSessionActive = NO;
     AVAudioSessionRouteDescription *routeChangePreviousRoute =
     (AVAudioSessionRouteDescription *)[notification.userInfo objectForKey:AVAudioSessionRouteChangePreviousRouteKey];
     
-    NSLog(@"%s routeChangePreviousRoute: %@", __FUNCTION__, routeChangePreviousRoute);
+//    NSLog(@"%s routeChangePreviousRoute: %@", __FUNCTION__, routeChangePreviousRoute);
     
     switch (routeChangeReason) {
         case AVAudioSessionRouteChangeReasonUnknown:
-            NSLog(@"%s routeChangeReason: AVAudioSessionRouteChangeReasonUnknown", __FUNCTION__);
+//            NSLog(@"%s routeChangeReason: AVAudioSessionRouteChangeReasonUnknown", __FUNCTION__);
             break;
             
         case AVAudioSessionRouteChangeReasonNewDeviceAvailable:
             // e.g. a headset was added or removed
-            NSLog(@"%s routeChangeReason: AVAudioSessionRouteChangeReasonNewDeviceAvailable", __FUNCTION__);
+//            NSLog(@"%s routeChangeReason: AVAudioSessionRouteChangeReasonNewDeviceAvailable", __FUNCTION__);
             break;
             
         case AVAudioSessionRouteChangeReasonOldDeviceUnavailable:
             // e.g. a headset was added or removed
-            NSLog(@"%s routeChangeReason: AVAudioSessionRouteChangeReasonOldDeviceUnavailable", __FUNCTION__);
+//            NSLog(@"%s routeChangeReason: AVAudioSessionRouteChangeReasonOldDeviceUnavailable", __FUNCTION__);
             break;
             
         case AVAudioSessionRouteChangeReasonCategoryChange:
             // called at start - also when other audio wants to play
-            NSLog(@"%s routeChangeReason: AVAudioSessionRouteChangeReasonCategoryChange", __FUNCTION__);
+//            NSLog(@"%s routeChangeReason: AVAudioSessionRouteChangeReasonCategoryChange", __FUNCTION__);
             break;
             
         case AVAudioSessionRouteChangeReasonOverride:
-            NSLog(@"%s routeChangeReason: AVAudioSessionRouteChangeReasonOverride", __FUNCTION__);
+//            NSLog(@"%s routeChangeReason: AVAudioSessionRouteChangeReasonOverride", __FUNCTION__);
             break;
             
         case AVAudioSessionRouteChangeReasonWakeFromSleep:
-            NSLog(@"%s routeChangeReason: AVAudioSessionRouteChangeReasonWakeFromSleep", __FUNCTION__);
+//            NSLog(@"%s routeChangeReason: AVAudioSessionRouteChangeReasonWakeFromSleep", __FUNCTION__);
             break;
             
         case AVAudioSessionRouteChangeReasonNoSuitableRouteForCategory:
-            NSLog(@"%s routeChangeReason: AVAudioSessionRouteChangeReasonNoSuitableRouteForCategory", __FUNCTION__);
+//            NSLog(@"%s routeChangeReason: AVAudioSessionRouteChangeReasonNoSuitableRouteForCategory", __FUNCTION__);
             break;
             
         case AVAudioSessionRouteChangeReasonRouteConfigurationChange:
-            NSLog(@"%s routeChangeReason: AVAudioSessionRouteChangeReasonRouteConfigurationChange", __FUNCTION__);
+//            NSLog(@"%s routeChangeReason: AVAudioSessionRouteChangeReasonRouteConfigurationChange", __FUNCTION__);
             break;
             
         default:
@@ -297,11 +297,11 @@ static BOOL isAudioSessionActive = NO;
 }
 
 -(void)handleAudioSessionMediaServicesWereReset:(NSNotification *)notification {
-    NSLog(@"%s [Main:%d] Object: %@ withInfo: %@", __FUNCTION__, [NSThread isMainThread], notification.object, notification.userInfo);
+//    NSLog(@"%s [Main:%d] Object: %@ withInfo: %@", __FUNCTION__, [NSThread isMainThread], notification.object, notification.userInfo);
 }
 
 -(void)handleAudioSessionMediaServicesWereLost:(NSNotification *)notification {
-    NSLog(@"%s [Main:%d] Object: %@ withInfo: %@", __FUNCTION__, [NSThread isMainThread], notification.object, notification.userInfo);
+//    NSLog(@"%s [Main:%d] Object: %@ withInfo: %@", __FUNCTION__, [NSThread isMainThread], notification.object, notification.userInfo);
 }
 
 

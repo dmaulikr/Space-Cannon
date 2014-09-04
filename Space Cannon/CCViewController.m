@@ -31,12 +31,58 @@
     // Present the scene.
     [skView presentScene:scene];
     
-    adView = [[ADBannerView alloc] initWithFrame:CGRectZero];
-    adView.frame = CGRectOffset(adView.frame, 0, 0.0f);
-    adView.delegate=self;
-    [self.view addSubview:adView];
+//    adView = [[ADBannerView alloc] initWithFrame:CGRectZero];
+//    adView.frame = CGRectOffset(adView.frame, 0, 0.0f);
+//    adView.delegate=self;
+//    [self.view addSubview:adView];
+//    
+//    self.bannerIsVisible = NO;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
     
-    self.bannerIsVisible = NO;
+    _adBanner = [[ADBannerView alloc] initWithFrame:CGRectMake(0, 50, 320, 50)];
+    _adBanner.delegate = self;
+}
+
+- (void)bannerViewDidLoadAd:(ADBannerView *)banner
+{
+    if (!_bannerIsVisible)
+    {
+        // If banner isn't part of view hierarchy, add it
+        if (_adBanner.superview == nil)
+        {
+            [self.view addSubview:_adBanner];
+        }
+        
+        [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
+        
+        // Assumes the banner view is just off the bottom of the screen.
+        banner.frame = CGRectOffset(banner.frame, 0, -banner.frame.size.height);
+        
+        [UIView commitAnimations];
+        
+        _bannerIsVisible = YES;
+    }
+}
+
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+{
+    NSLog(@"Failed to retrieve ad");
+    
+    if (_bannerIsVisible)
+    {
+        [UIView beginAnimations:@"animateAdBannerOff" context:NULL];
+        
+        // Assumes the banner view is placed at the bottom of the screen.
+        banner.frame = CGRectOffset(banner.frame, 0, banner.frame.size.height);
+        
+        [UIView commitAnimations];
+        
+        _bannerIsVisible = NO;
+    }
 }
 
 - (void)handleNotification:(NSNotification *)notification
@@ -51,7 +97,7 @@
 -(void)hidesBanner {
     
 //    NSLog(@"HIDING BANNER");
-    [adView setAlpha:0];
+    [_adBanner setAlpha:0];
     self.bannerIsVisible = NO;
 }
 
@@ -59,7 +105,7 @@
 -(void)showsBanner {
     
 //    NSLog(@"SHOWING BANNER");
-    [adView setAlpha:1];
+    [_adBanner setAlpha:1];
     self.bannerIsVisible = YES;
     
 }

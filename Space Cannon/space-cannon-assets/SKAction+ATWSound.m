@@ -53,7 +53,7 @@ static dispatch_queue_t sATWAudioPlayersCacheQueue; // It's our concurrent queue
             // It could happen if delay was nearly equal to [audioPlayer duration] (i.e. released while stopping).
             [audioPlayer stop];
             [sATWAudioPlayersCache removeObject:audioPlayer];
-            NSLog(@"%s Removed: %@ , Cache: %lu", __PRETTY_FUNCTION__, audioPlayer, (unsigned long)[sATWAudioPlayersCache count]);
+//            NSLog(@"%s Removed: %@ , Cache: %lu", __PRETTY_FUNCTION__, audioPlayer, (unsigned long)[sATWAudioPlayersCache count]);
         });
     });
 }
@@ -75,7 +75,7 @@ static dispatch_queue_t sATWAudioPlayersCacheQueue; // It's our concurrent queue
                 // Cache audioPlayer to avoid autoreleasing before play end
                 [SKAction atwCacheAudioPlayer:audioPlayer];
             }
-            NSLog(@"%s  Added: %@ withError: %@, Cache: %lu", __PRETTY_FUNCTION__, audioPlayer, error, (unsigned long)[sATWAudioPlayersCache count]);
+//            NSLog(@"%s  Added: %@ withError: %@, Cache: %lu", __PRETTY_FUNCTION__, audioPlayer, error, (unsigned long)[sATWAudioPlayersCache count]);
         } queue:sATWAudioPlayersCacheQueue];
     }
 }
