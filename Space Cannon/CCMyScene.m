@@ -117,7 +117,7 @@ static inline CGFloat randomInRange(CGFloat low, CGFloat high)
 	self.soundFileURL = newURL;
     
 	// Registers this class as the delegate of the audio session.
-	[[AVAudioSession sharedInstance] setDelegate: self];
+	[[AVAudioSession sharedInstance] setActive:YES error:nil];
 	
 	// The AmbientSound category allows application audio to mix with Media Player
 	// audio. The category also indicates that application audio should stop playing
@@ -316,6 +316,7 @@ static inline CGFloat randomInRange(CGFloat low, CGFloat high)
         _menu.topScore = [_userDefaults integerForKey:kCCKeyTopScore];
         
         [self setupApplicationAudio];
+
         
         
 //        // Load music

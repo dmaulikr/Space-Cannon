@@ -18,6 +18,8 @@
     //Add view controller as observer
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNotification:) name:@"hideAd" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNotification:) name:@"showAd" object:nil];
+    
+
 
     // Configure the view.
     SKView * skView = (SKView *)self.view;
