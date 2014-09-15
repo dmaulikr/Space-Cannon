@@ -478,7 +478,7 @@ static inline CGFloat randomInRange(CGFloat low, CGFloat high)
 -(void)setPointValue:(int)pointValue
 {
     _pointValue = pointValue;
-    _pointLabel.text = [NSString stringWithFormat:@"Ponts: x%d", pointValue];
+    _pointLabel.text = [NSString stringWithFormat:@"Points: x%d", pointValue];
 }
 
 -(void)setGamePaused:(BOOL)gamePaused
