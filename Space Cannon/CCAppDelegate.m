@@ -57,8 +57,10 @@
     SKView *view = (SKView*)self.window.rootViewController.view;
     ((CCMyScene*)view.scene).gamePaused = YES;
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidBecomeActive:) name:UIApplicationDidEnterBackgroundNotification object:nil];
+    
     // Prevent Audio Crash
-    [self deactivateAudioSession];
+//    [self deactivateAudioSession];
     
 //    [[AVAudioSession sharedInstance] setActive:NO error:nil];
     
@@ -84,7 +86,12 @@
 //    SKView *view = (SKView*)self.window.rootViewController.view;
 //    view.paused = YES;
 //    [[AVAudioSession sharedInstance] setActive:YES error:nil];
-    [self activateAudioSession];
+
+    
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidEnterBackground:) name:UIApplicationDidBecomeActiveNotification object:nil];
+    
+//    [self activateAudioSession];
     
 }
 

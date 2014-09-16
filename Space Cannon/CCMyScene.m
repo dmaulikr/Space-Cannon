@@ -481,6 +481,7 @@ static inline CGFloat randomInRange(CGFloat low, CGFloat high)
     _pointLabel.text = [NSString stringWithFormat:@"Points: x%d", pointValue];
 }
 
+
 -(void)setGamePaused:(BOOL)gamePaused
 {
     if (!_gameOver) {
