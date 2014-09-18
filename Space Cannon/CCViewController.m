@@ -45,7 +45,7 @@
 {
     [super viewDidAppear:animated];
     
-    _adBanner = [[ADBannerView alloc] initWithFrame:CGRectMake(0, 50, 320, 50)];
+    _adBanner = [[ADBannerView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
     _adBanner.delegate = self;
 }
 
@@ -59,12 +59,11 @@
             [self.view addSubview:_adBanner];
         }
         
-        [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
-        
-        // Assumes the banner view is just off the bottom of the screen.
-        banner.frame = CGRectOffset(banner.frame, 0, -banner.frame.size.height);
-        
-        [UIView commitAnimations];
+//        [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
+//        
+//        banner.frame = CGRectOffset(banner.frame, 0, -banner.frame.size.height);
+//        
+//        [UIView commitAnimations];
         
         _bannerIsVisible = YES;
     }
@@ -78,7 +77,6 @@
     {
         [UIView beginAnimations:@"animateAdBannerOff" context:NULL];
         
-        // Assumes the banner view is placed at the bottom of the screen.
         banner.frame = CGRectOffset(banner.frame, 0, banner.frame.size.height);
         
         [UIView commitAnimations];
@@ -98,17 +96,23 @@
 
 -(void)hidesBanner {
     
-//    NSLog(@"HIDING BANNER");
-    [_adBanner setAlpha:0];
-    self.bannerIsVisible = NO;
+    NSLog(@"HIDING BANNER");
+    [UIView beginAnimations:nil context:NULL];//initiate the animation
+    [UIView setAnimationDuration:1];//make an animation 1 second long
+    [_adBanner setAlpha:0];//disable the ad by making it invisible
+    [UIView commitAnimations];//do the animation above
+//    self.bannerIsVisible = NO;
 }
 
 
 -(void)showsBanner {
     
-//    NSLog(@"SHOWING BANNER");
-    [_adBanner setAlpha:1];
-    self.bannerIsVisible = YES;
+    NSLog(@"SHOWING BANNER");
+    [UIView beginAnimations:nil context:NULL];//initiate the animation
+    [UIView setAnimationDuration:1];//make an animation 1 second long
+    [_adBanner setAlpha:1];//enable the ad by making it visible
+    [UIView commitAnimations];//do the animation above
+//    self.bannerIsVisible = YES;
     
 }
 
