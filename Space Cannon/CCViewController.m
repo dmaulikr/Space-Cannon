@@ -32,21 +32,16 @@
     
     // Present the scene.
     [skView presentScene:scene];
-    
-//    adView = [[ADBannerView alloc] initWithFrame:CGRectZero];
-//    adView.frame = CGRectOffset(adView.frame, 0, 0.0f);
-//    adView.delegate=self;
-//    [self.view addSubview:adView];
-//    
-//    self.bannerIsVisible = NO;
+
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     
-    _adBanner = [[ADBannerView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
+    _adBanner = [[ADBannerView alloc] initWithFrame:CGRectZero];
     _adBanner.delegate = self;
+    _adBanner.hidden = NO;
 }
 
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner
@@ -59,12 +54,6 @@
             [self.view addSubview:_adBanner];
         }
         
-//        [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
-//        
-//        banner.frame = CGRectOffset(banner.frame, 0, -banner.frame.size.height);
-//        
-//        [UIView commitAnimations];
-        
         _bannerIsVisible = YES;
     }
 }
@@ -76,10 +65,9 @@
     if (_bannerIsVisible)
     {
         [UIView beginAnimations:@"animateAdBannerOff" context:NULL];
-        
-        banner.frame = CGRectOffset(banner.frame, 0, banner.frame.size.height);
-        
         [UIView commitAnimations];
+        
+        
         
         _bannerIsVisible = NO;
     }
@@ -101,7 +89,6 @@
     [UIView setAnimationDuration:1];//make an animation 1 second long
     [_adBanner setAlpha:0];//disable the ad by making it invisible
     [UIView commitAnimations];//do the animation above
-//    self.bannerIsVisible = NO;
 }
 
 
@@ -112,7 +99,6 @@
     [UIView setAnimationDuration:1];//make an animation 1 second long
     [_adBanner setAlpha:1];//enable the ad by making it visible
     [UIView commitAnimations];//do the animation above
-//    self.bannerIsVisible = YES;
     
 }
 

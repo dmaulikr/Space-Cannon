@@ -19,6 +19,9 @@
 		A031D9E119AF896A0043F8C4 /* CCDifficulty.m in Sources */ = {isa = PBXBuildFile; fileRef = A031D9E019AF896A0043F8C4 /* CCDifficulty.m */; };
 		A045DC1819AA56490011945F /* PauseButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A045DC1619AA56490011945F /* PauseButton@2x.png */; };
 		A045DC1919AA56490011945F /* ResumeButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A045DC1719AA56490011945F /* ResumeButton@2x.png */; };
+		A051890C19DE779D00AD6882 /* dsym_upload.sh in Resources */ = {isa = PBXBuildFile; fileRef = A051890A19DE779D00AD6882 /* dsym_upload.sh */; };
+		A051890D19DE779D00AD6882 /* libCrittercism_v4_3_7.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A051890B19DE779D00AD6882 /* libCrittercism_v4_3_7.a */; };
+		A051890F19DE794400AD6882 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A051890E19DE794400AD6882 /* SystemConfiguration.framework */; };
 		A069D23E19AAB4FE00A55CE9 /* ObservingTheStar.caf in Resources */ = {isa = PBXBuildFile; fileRef = A069D23D19AAB4FE00A55CE9 /* ObservingTheStar.caf */; };
 		A0730C961974E6230065BC8F /* PlayButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0730C931974E6230065BC8F /* PlayButton@2x.png */; };
 		A0730C971974E6230065BC8F /* ScoreBoard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0730C941974E6230065BC8F /* ScoreBoard@2x.png */; };
@@ -94,6 +97,12 @@
 		A031D9E019AF896A0043F8C4 /* CCDifficulty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCDifficulty.m; path = "space-cannon-assets/CCDifficulty.m"; sourceTree = "<group>"; };
 		A045DC1619AA56490011945F /* PauseButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PauseButton@2x.png"; sourceTree = "<group>"; };
 		A045DC1719AA56490011945F /* ResumeButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ResumeButton@2x.png"; sourceTree = "<group>"; };
+		A051890719DE779D00AD6882 /* CRFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRFilter.h; sourceTree = "<group>"; };
+		A051890819DE779D00AD6882 /* Crittercism.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crittercism.h; sourceTree = "<group>"; };
+		A051890919DE779D00AD6882 /* CrittercismDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrittercismDelegate.h; sourceTree = "<group>"; };
+		A051890A19DE779D00AD6882 /* dsym_upload.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = dsym_upload.sh; sourceTree = "<group>"; };
+		A051890B19DE779D00AD6882 /* libCrittercism_v4_3_7.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCrittercism_v4_3_7.a; sourceTree = "<group>"; };
+		A051890E19DE794400AD6882 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A069D23D19AAB4FE00A55CE9 /* ObservingTheStar.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ObservingTheStar.caf; sourceTree = "<group>"; };
 		A0730C931974E6230065BC8F /* PlayButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlayButton@2x.png"; sourceTree = "<group>"; };
 		A0730C941974E6230065BC8F /* ScoreBoard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScoreBoard@2x.png"; sourceTree = "<group>"; };
@@ -158,6 +167,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A051890F19DE794400AD6882 /* SystemConfiguration.framework in Frameworks */,
+				A051890D19DE779D00AD6882 /* libCrittercism_v4_3_7.a in Frameworks */,
 				A031D9DC19AF80E20043F8C4 /* iAd.framework in Frameworks */,
 				A0DBCD36191EBAA400B8B292 /* CoreGraphics.framework in Frameworks */,
 				A0DBCD38191EBAA400B8B292 /* UIKit.framework in Frameworks */,
@@ -179,6 +190,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A051890619DE779D00AD6882 /* CrittercismSDK */ = {
+			isa = PBXGroup;
+			children = (
+				A051890719DE779D00AD6882 /* CRFilter.h */,
+				A051890819DE779D00AD6882 /* Crittercism.h */,
+				A051890919DE779D00AD6882 /* CrittercismDelegate.h */,
+				A051890A19DE779D00AD6882 /* dsym_upload.sh */,
+				A051890B19DE779D00AD6882 /* libCrittercism_v4_3_7.a */,
+			);
+			path = CrittercismSDK;
+			sourceTree = "<group>";
+		};
 		A069D23F19AAB57200A55CE9 /* Music */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +258,7 @@
 				A0DBCD5F191EBAA400B8B292 /* Space CannonTests */,
 				A0DBCD32191EBAA300B8B292 /* Frameworks */,
 				A0DBCD31191EBAA300B8B292 /* Products */,
+				A051890619DE779D00AD6882 /* CrittercismSDK */,
 			);
 			sourceTree = "<group>";
 		};
@@ -250,6 +274,7 @@
 		A0DBCD32191EBAA300B8B292 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A051890E19DE794400AD6882 /* SystemConfiguration.framework */,
 				A031D9DD19AF80EA0043F8C4 /* AVFoundation.framework */,
 				A031D9DB19AF80E20043F8C4 /* iAd.framework */,
 				A0DBCD33191EBAA300B8B292 /* Foundation.framework */,
@@ -449,6 +474,7 @@
 				A02D1AE819B6C5F200999426 /* NewEasyButton@2x.png in Resources */,
 				A023382D196CF4B700A421CF /* HaloExplosion.sks in Resources */,
 				A0E64719197370E8008F7C05 /* Laser.caf in Resources */,
+				A051890C19DE779D00AD6882 /* dsym_upload.sh in Resources */,
 				A0AA346819A31B63004C3B19 /* ShieldUp.caf in Resources */,
 				A0DBCD82191EBBBD00B8B292 /* Ball@2x.png in Resources */,
 				A0DBCD53191EBAA400B8B292 /* Images.xcassets in Resources */,
@@ -635,6 +661,11 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INFOPLIST_FILE = "Space Cannon/Space Cannon-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CrittercismSDK",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
@@ -655,6 +686,11 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INFOPLIST_FILE = "Space Cannon/Space Cannon-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CrittercismSDK",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;

@@ -9,6 +9,7 @@
 #import "CCAppDelegate.h"
 #import "CCMyScene.h"
 #import <SpriteKit/SpriteKit.h>
+#import "Crittercism.h"
 
 @implementation CCAppDelegate
 
@@ -24,6 +25,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [Crittercism enableWithAppID:@"542c24c6d478bc076d000004"];
     [self startAudio];
     return YES;
     
