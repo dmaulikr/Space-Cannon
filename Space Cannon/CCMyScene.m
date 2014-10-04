@@ -25,9 +25,16 @@
     BOOL _gameOver;
     BOOL _testGame;
     BOOL _didShoot;
+    SKAction *_bounceSound;
+    SKAction *_deepExplosionSound;
+    SKAction *_explosionSound;
+    SKAction *_laserSound;
+    SKAction *_zapSound;
+    SKAction *_shieldUpSound;
     int _killCount;
     NSUserDefaults *_userDefaults;
     NSMutableArray *_shieldPool;
+    
     
 }
 @synthesize playing;
@@ -50,12 +57,12 @@ static const uint32_t kCCMultiUpCategory  = 0x1 << 6;
 
 static NSString * const kCCKeyTopScore = @"TopScore";
 
-static NSData __strong *_bounceSoundData = nil;
-static NSData __strong *_zapSoundData = nil;
-static NSData __strong *_deepExplosionSoundData = nil;
-static NSData __strong *_explosionSoundData = nil;
-static NSData __strong *_laserSoundData = nil;
-static NSData __strong *_shieldUpSoundData = nil;
+//static NSData __strong *_bounceSoundData = nil;
+//static NSData __strong *_zapSoundData = nil;
+//static NSData __strong *_deepExplosionSoundData = nil;
+//static NSData __strong *_explosionSoundData = nil;
+//static NSData __strong *_laserSoundData = nil;
+//static NSData __strong *_shieldUpSoundData = nil;
 
 static inline CGVector radiansToVector(CGFloat radians)
 {
@@ -182,16 +189,6 @@ static inline CGFloat randomInRange(CGFloat low, CGFloat high)
         rightEdge.physicsBody.categoryBitMask = kCCEdgeCategory;
         [self addChild:rightEdge];
         
-//        SKNode *topEdge = [[SKNode alloc] init];
-//        topEdge.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointZero toPoint:CGPointMake(self.size.width, 0.0)];
-//        topEdge.position = CGPointMake(0.0 , self.size.height);
-//        [self addChild:topEdge];
-//        
-//        SKNode *bottomEdge = [[SKNode alloc] init];
-//        bottomEdge.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointZero toPoint:CGPointMake(self.size.width, 0.0)];
-//        bottomEdge.position = CGPointMake(0.0, 0.0);
-//        [self addChild:bottomEdge];
-        
         // Adds efficiency
         background.blendMode = SKBlendModeReplace;
         [self addChild:background];
@@ -208,10 +205,6 @@ static inline CGFloat randomInRange(CGFloat low, CGFloat high)
         // Create cannon rotation actions.
         SKAction *rotateCannon = [SKAction sequence:@[[SKAction rotateByAngle:M_PI duration:2],
                                                       [SKAction rotateByAngle:-M_PI duration:2]]];
-//        SKAction *firstRotate  = [SKAction rotateByAngle:2.35619449 duration:1];
-//        SKAction *rotateCannon = [SKAction sequence:@[[SKAction rotateByAngle:-1.57079633 duration:1],
-//                                                      [SKAction rotateByAngle:1.57079633 duration:1]]];
-//        [_cannon runAction:firstRotate];
         [_cannon runAction:[SKAction repeatActionForever:rotateCannon]];
         
         // Create spawn halo actions.
@@ -278,22 +271,22 @@ static inline CGFloat randomInRange(CGFloat low, CGFloat high)
         
         // Setup sounds
         // Best Practice
-//        _bounceSound = [SKAction playSoundFileNamed:@"Bounce.caf" waitForCompletion:NO];
-//        _deepExplosionSound = [SKAction playSoundFileNamed:@"DeepExplosion.caf" waitForCompletion:NO];
-//        _explosionSound = [SKAction playSoundFileNamed:@"Explosion.caf" waitForCompletion:NO];
-//        _laserSound = [SKAction playSoundFileNamed:@"Laser.caf" waitForCompletion:NO];
-//        _zapSound = [SKAction playSoundFileNamed:@"Zap.caf" waitForCompletion:NO];
-//        _shieldUpSound = [SKAction playSoundFileNamed:@"ShieldUp.caf" waitForCompletion:NO];
+        _bounceSound = [SKAction playSoundFileNamed:@"Bounce.caf" waitForCompletion:NO];
+        _deepExplosionSound = [SKAction playSoundFileNamed:@"DeepExplosion.caf" waitForCompletion:NO];
+        _explosionSound = [SKAction playSoundFileNamed:@"Explosion.caf" waitForCompletion:NO];
+        _laserSound = [SKAction playSoundFileNamed:@"Laser.caf" waitForCompletion:NO];
+        _zapSound = [SKAction playSoundFileNamed:@"Zap.caf" waitForCompletion:NO];
+        _shieldUpSound = [SKAction playSoundFileNamed:@"ShieldUp.caf" waitForCompletion:NO];
         
-        static dispatch_once_t onceToken;
-        dispatch_once(&onceToken, ^{
-            _bounceSoundData = [SKAction atwDataFromSoundFileNamed:@"Bounce.caf"];
-            _deepExplosionSoundData = [SKAction atwDataFromSoundFileNamed:@"DeepExplosion.caf"];
-            _explosionSoundData = [SKAction atwDataFromSoundFileNamed:@"Explosion.caf"];
-            _laserSoundData = [SKAction atwDataFromSoundFileNamed:@"Laser.caf"];
-            _zapSoundData = [SKAction atwDataFromSoundFileNamed:@"Zap.caf"];
-            _shieldUpSoundData = [SKAction atwDataFromSoundFileNamed:@"ShieldUp.caf"];
-        });
+//        static dispatch_once_t onceToken;
+//        dispatch_once(&onceToken, ^{
+//            _bounceSoundData = [SKAction atwDataFromSoundFileNamed:@"Bounce.caf"];
+//            _deepExplosionSoundData = [SKAction atwDataFromSoundFileNamed:@"DeepExplosion.caf"];
+//            _explosionSoundData = [SKAction atwDataFromSoundFileNamed:@"Explosion.caf"];
+//            _laserSoundData = [SKAction atwDataFromSoundFileNamed:@"Laser.caf"];
+//            _zapSoundData = [SKAction atwDataFromSoundFileNamed:@"Zap.caf"];
+//            _shieldUpSoundData = [SKAction atwDataFromSoundFileNamed:@"ShieldUp.caf"];
+//        });
         
         
         // Setup menu
@@ -313,76 +306,15 @@ static inline CGFloat randomInRange(CGFloat low, CGFloat high)
         
         // Load top score
         _userDefaults = [NSUserDefaults standardUserDefaults];
-        _menu.topScore = [_userDefaults integerForKey:kCCKeyTopScore];
+        _menu.topScore = (int)[_userDefaults integerForKey:kCCKeyTopScore];
         
         [self setupApplicationAudio];
 
-        
-        
-//        // Load music
-//        NSURL *url = [[NSBundle mainBundle] URLForResource:@"ObservingTheStar" withExtension:@"caf"];
-//        NSError *error = nil;
-//        _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
-//
-//        
-//        if (!_audioPlayer) {
-//            NSLog(@"Error loading audio player: %@", error);
-//        }
-//        else {
-//            _audioPlayer.numberOfLoops = -1;
-//            _audioPlayer.volume = 0.8;
-//            [_audioPlayer play];
-//            _menu.musicPlaying = YES;
-//        }
 
     }
 
     return self;
 }
-
-#pragma mark - Shared Assets
-
-// Method for preloading assets concurrently to speedup start
-//+ (void)loadAssets {
-//    [super loadAssets];
-//    
-//    static dispatch_once_t onceToken;
-//    dispatch_once(&onceToken, ^{
-//        _bounceSoundData = [SKAction atwDataFromSoundFileNamed:@"Bounce.caf"];
-//        _zapSoundData = [SKAction atwDataFromSoundFileNamed:@"Zap.caf"];
-//
-//    });
-////    dispatch_once(&onceToken, ^{
-////        _zapSoundData = [SKAction atwDataFromSoundFileNamed:@"Zap.caf"];
-////    });
-//    
-//}
-
-
-- (SKAction *)_bounceSound {
-    return [SKAction atwPlaySoundWithData:_bounceSoundData];
-}
-
-- (SKAction *)_deepExplosionSound {
-    return [SKAction atwPlaySoundWithData:_deepExplosionSoundData];
-}
-
-- (SKAction *)_explosionSound {
-    return [SKAction atwPlaySoundWithData:_explosionSoundData];
-}
-
-- (SKAction *)_laserSound {
-    return [SKAction atwPlaySoundWithData:_laserSoundData];
-}
-
-- (SKAction *)_zapSound {
-    return [SKAction atwPlaySoundWithData:_zapSoundData];
-}
-
-- (SKAction *)_shieldUpSound {
-    return [SKAction atwPlaySoundWithData:_shieldUpSoundData];
-}
-
 
 -(void)newGame
 {
@@ -524,7 +456,7 @@ static inline CGFloat randomInRange(CGFloat low, CGFloat high)
     ball.physicsBody.collisionBitMask = kCCEdgeCategory;
     ball.physicsBody.contactTestBitMask = kCCEdgeCategory |  kCCShieldUpCategory | kCCMultiUpCategory;
 
-    [self runAction:[self _laserSound]];
+    [self runAction:_laserSound];
     
     // Create trail.
     NSString *ballTrailPath = [[NSBundle mainBundle] pathForResource:@"BallTrail" ofType:@"sks"];
@@ -633,7 +565,7 @@ static inline CGFloat randomInRange(CGFloat low, CGFloat high)
         // Collision between halo and ball.
         self.score += self.pointValue;
         [self addExplosion :firstBody.node.position withName:@"HaloExplosion"];
-        [self runAction:[self _explosionSound]];
+        [self runAction:_explosionSound];
         
         if ([[firstBody.node.userData valueForKey:@"Multiplier"] boolValue]) {
             self.pointValue++;
@@ -664,7 +596,7 @@ static inline CGFloat randomInRange(CGFloat low, CGFloat high)
     if (firstBody.categoryBitMask == kCCHaloCategory && secondBody.categoryBitMask == kCCShieldCateogry) {
         // Collision between halo and shield.
         [self addExplosion:firstBody.node.position withName:@"HaloExplosion"];
-        [self runAction:[self _explosionSound]];
+        [self runAction:_explosionSound];
         
         if ([[firstBody.node.userData valueForKey:@"Bomb"] boolValue]) {
             // Remove all shields
@@ -683,7 +615,7 @@ static inline CGFloat randomInRange(CGFloat low, CGFloat high)
         // Collision between halo and lifebar.
         [self addExplosion:firstBody.node.position withName:@"HaloExplosion"];
         [self addExplosion:secondBody.node.position withName:@"LifeBarExplosion"];
-        [self runAction:[self _deepExplosionSound]];
+        [self runAction:_deepExplosionSound];
         
         [firstBody.node removeFromParent];
         [secondBody.node removeFromParent];
@@ -694,7 +626,7 @@ static inline CGFloat randomInRange(CGFloat low, CGFloat high)
     }
     
     if (firstBody.categoryBitMask == kCCHaloCategory && secondBody.categoryBitMask == kCCEdgeCategory) {
-        [self runAction:[self _zapSound]];
+        [self runAction:_zapSound];
     }
     
     if (firstBody.categoryBitMask == kCCBallCategory && secondBody.categoryBitMask == kCCEdgeCategory) {
@@ -705,8 +637,7 @@ static inline CGFloat randomInRange(CGFloat low, CGFloat high)
                 self.pointValue = 1;
             }
         }
-        
-        [self runAction:[self _bounceSound]];
+        [self runAction:_bounceSound];
     }
     
     if (firstBody.categoryBitMask == kCCBallCategory && secondBody.categoryBitMask == kCCShieldUpCategory) {
@@ -715,15 +646,14 @@ static inline CGFloat randomInRange(CGFloat low, CGFloat high)
             int randomIndex = arc4random_uniform((int)_shieldPool.count);
             [_mainLayer addChild:[_shieldPool objectAtIndex:randomIndex]];
             [_shieldPool removeObjectAtIndex:randomIndex];
-            [self runAction:[self _shieldUpSound]];
+            [self runAction:_shieldUpSound];
         }
         [firstBody.node removeFromParent];
         [secondBody.node removeFromParent];
-        
     }
     if (firstBody.categoryBitMask == kCCBallCategory && secondBody.categoryBitMask == kCCMultiUpCategory) {
         self.multiMode = YES;
-        [self runAction:[self _shieldUpSound]];
+        [self runAction:_shieldUpSound];
         self.ammo = 5;
         [firstBody.node removeFromParent];
         [secondBody.node removeFromParent];

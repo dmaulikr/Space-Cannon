@@ -17,10 +17,9 @@
     BOOL playing ;
     BOOL interruptedOnPlayback;
     NSURL *soundFileURL;
+    
 
 }
-
-
 
 @property (nonatomic) int ammo;
 @property (nonatomic) int score;

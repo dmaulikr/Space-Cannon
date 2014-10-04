@@ -22,6 +22,7 @@
 		A051890C19DE779D00AD6882 /* dsym_upload.sh in Resources */ = {isa = PBXBuildFile; fileRef = A051890A19DE779D00AD6882 /* dsym_upload.sh */; };
 		A051890D19DE779D00AD6882 /* libCrittercism_v4_3_7.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A051890B19DE779D00AD6882 /* libCrittercism_v4_3_7.a */; };
 		A051890F19DE794400AD6882 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A051890E19DE794400AD6882 /* SystemConfiguration.framework */; };
+		A051891119DF7D6F00AD6882 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A051891019DF7D6F00AD6882 /* GameKit.framework */; };
 		A069D23E19AAB4FE00A55CE9 /* ObservingTheStar.caf in Resources */ = {isa = PBXBuildFile; fileRef = A069D23D19AAB4FE00A55CE9 /* ObservingTheStar.caf */; };
 		A0730C961974E6230065BC8F /* PlayButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0730C931974E6230065BC8F /* PlayButton@2x.png */; };
 		A0730C971974E6230065BC8F /* ScoreBoard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0730C941974E6230065BC8F /* ScoreBoard@2x.png */; };
@@ -103,6 +104,7 @@
 		A051890A19DE779D00AD6882 /* dsym_upload.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = dsym_upload.sh; sourceTree = "<group>"; };
 		A051890B19DE779D00AD6882 /* libCrittercism_v4_3_7.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCrittercism_v4_3_7.a; sourceTree = "<group>"; };
 		A051890E19DE794400AD6882 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A051891019DF7D6F00AD6882 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		A069D23D19AAB4FE00A55CE9 /* ObservingTheStar.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ObservingTheStar.caf; sourceTree = "<group>"; };
 		A0730C931974E6230065BC8F /* PlayButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlayButton@2x.png"; sourceTree = "<group>"; };
 		A0730C941974E6230065BC8F /* ScoreBoard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScoreBoard@2x.png"; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				A0DBCD38191EBAA400B8B292 /* UIKit.framework in Frameworks */,
 				A0DBCD3A191EBAA400B8B292 /* SpriteKit.framework in Frameworks */,
 				A0DBCD34191EBAA300B8B292 /* Foundation.framework in Frameworks */,
+				A051891119DF7D6F00AD6882 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +277,7 @@
 		A0DBCD32191EBAA300B8B292 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A051891019DF7D6F00AD6882 /* GameKit.framework */,
 				A051890E19DE794400AD6882 /* SystemConfiguration.framework */,
 				A031D9DD19AF80EA0043F8C4 /* AVFoundation.framework */,
 				A031D9DB19AF80E20043F8C4 /* iAd.framework */,
@@ -428,6 +432,11 @@
 				TargetAttributes = {
 					A0DBCD2F191EBAA300B8B292 = {
 						DevelopmentTeam = 74GMB5MEKL;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
 					};
 					A0DBCD57191EBAA400B8B292 = {
 						TestTargetID = A0DBCD2F191EBAA300B8B292;
