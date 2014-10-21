@@ -57,13 +57,6 @@ static const uint32_t kCCMultiUpCategory  = 0x1 << 6;
 
 static NSString * const kCCKeyTopScore = @"TopScore";
 
-//static NSData __strong *_bounceSoundData = nil;
-//static NSData __strong *_zapSoundData = nil;
-//static NSData __strong *_deepExplosionSoundData = nil;
-//static NSData __strong *_explosionSoundData = nil;
-//static NSData __strong *_laserSoundData = nil;
-//static NSData __strong *_shieldUpSoundData = nil;
-
 static inline CGVector radiansToVector(CGFloat radians)
 {
     CGVector vector;
@@ -440,7 +433,7 @@ static inline CGFloat randomInRange(CGFloat low, CGFloat high)
 -(void)shoot
 {
     // Create ball node.
-    CCBall *ball = [CCBall spriteNodeWithImageNamed:@"Ball"];
+    CCBall *ball = [CCBall spriteNodeWithImageNamed:@"Cannon Ball"];
     ball.name = @"ball";
     CGVector rotationVector = radiansToVector(_cannon.zRotation);
     ball.position = CGPointMake(_cannon.position.x + (_cannon.size.width * 0.5 * rotationVector.dx),

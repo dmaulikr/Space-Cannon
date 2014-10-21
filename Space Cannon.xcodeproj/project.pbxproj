@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		A0137DBB19A51B660092797F /* GreenCannon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0137DB919A51B660092797F /* GreenCannon@2x.png */; };
 		A0137DBC19A51B660092797F /* MultiShotPowerUp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0137DBA19A51B660092797F /* MultiShotPowerUp@2x.png */; };
+		A022A7F519E9DC8100DCED0D /* Cannon Ball@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = A022A7F219E9DC8100DCED0D /* Cannon Ball@1x.png */; };
+		A022A7F619E9DC8100DCED0D /* Cannon Ball@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A022A7F319E9DC8100DCED0D /* Cannon Ball@2x.png */; };
+		A022A7F719E9DC8100DCED0D /* Cannon Ball@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A022A7F419E9DC8100DCED0D /* Cannon Ball@3x.png */; };
 		A023382D196CF4B700A421CF /* HaloExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = A023382B196CF4B700A421CF /* HaloExplosion.sks */; };
 		A023382E196CF4B700A421CF /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = A023382C196CF4B700A421CF /* spark.png */; };
 		A02D1AE619B6C5A200999426 /* NewEasyButtonAlt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A02D1AE519B6C5A200999426 /* NewEasyButtonAlt@2x.png */; };
@@ -86,6 +89,9 @@
 /* Begin PBXFileReference section */
 		A0137DB919A51B660092797F /* GreenCannon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GreenCannon@2x.png"; sourceTree = "<group>"; };
 		A0137DBA19A51B660092797F /* MultiShotPowerUp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MultiShotPowerUp@2x.png"; sourceTree = "<group>"; };
+		A022A7F219E9DC8100DCED0D /* Cannon Ball@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Cannon Ball@1x.png"; path = "../../../../Space Cannon New Assets/Cannon Ball@1x.png"; sourceTree = "<group>"; };
+		A022A7F319E9DC8100DCED0D /* Cannon Ball@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Cannon Ball@2x.png"; path = "../../../../Space Cannon New Assets/Cannon Ball@2x.png"; sourceTree = "<group>"; };
+		A022A7F419E9DC8100DCED0D /* Cannon Ball@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Cannon Ball@3x.png"; path = "../../../../Space Cannon New Assets/Cannon Ball@3x.png"; sourceTree = "<group>"; };
 		A023382B196CF4B700A421CF /* HaloExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = HaloExplosion.sks; path = ../HaloExplosion.sks; sourceTree = "<group>"; };
 		A023382C196CF4B700A421CF /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spark.png; path = ../spark.png; sourceTree = "<group>"; };
 		A02D1AE519B6C5A200999426 /* NewEasyButtonAlt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NewEasyButtonAlt@2x.png"; sourceTree = "<group>"; };
@@ -193,6 +199,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A022A7F119E9DC7200DCED0D /* New Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A022A7F219E9DC8100DCED0D /* Cannon Ball@1x.png */,
+				A022A7F319E9DC8100DCED0D /* Cannon Ball@2x.png */,
+				A022A7F419E9DC8100DCED0D /* Cannon Ball@3x.png */,
+			);
+			name = "New Assets";
+			sourceTree = "<group>";
+		};
 		A051890619DE779D00AD6882 /* CrittercismSDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,6 +364,7 @@
 		A0DBCD6F191EBBBD00B8B292 /* Space Cannon Assets */ = {
 			isa = PBXGroup;
 			children = (
+				A022A7F119E9DC7200DCED0D /* New Assets */,
 				A069D23F19AAB57200A55CE9 /* Music */,
 				A0730C921974E5FD0065BC8F /* Menu */,
 				A0E64710197370CF008F7C05 /* Animations */,
@@ -475,7 +492,9 @@
 				A0DBCD40191EBAA400B8B292 /* InfoPlist.strings in Resources */,
 				A0137DBB19A51B660092797F /* GreenCannon@2x.png in Resources */,
 				A0A46482199FF73600281233 /* HaloX@2x.png in Resources */,
+				A022A7F719E9DC8100DCED0D /* Cannon Ball@3x.png in Resources */,
 				A0E64717197370E8008F7C05 /* DeepExplosion.caf in Resources */,
+				A022A7F619E9DC8100DCED0D /* Cannon Ball@2x.png in Resources */,
 				A0DBCD81191EBBBD00B8B292 /* Ammo5@2x.png in Resources */,
 				A0A3128919B583F1005A2665 /* TestButton@2x.png in Resources */,
 				A0DBCD7D191EBBBD00B8B292 /* Ammo1@2x.png in Resources */,
@@ -493,6 +512,7 @@
 				A0DBCD49191EBAA400B8B292 /* Main.storyboard in Resources */,
 				A0E64718197370E8008F7C05 /* Explosion.caf in Resources */,
 				A069D23E19AAB4FE00A55CE9 /* ObservingTheStar.caf in Resources */,
+				A022A7F519E9DC8100DCED0D /* Cannon Ball@1x.png in Resources */,
 				A0DBCD7C191EBBBD00B8B292 /* Ammo0@2x.png in Resources */,
 				A045DC1919AA56490011945F /* ResumeButton@2x.png in Resources */,
 				A0DBCD7E191EBBBD00B8B292 /* Ammo2@2x.png in Resources */,
