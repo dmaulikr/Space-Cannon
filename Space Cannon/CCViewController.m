@@ -9,6 +9,8 @@
 #import "CCViewController.h"
 #import "CCMyScene.h"
 
+
+
 @implementation CCViewController
 
 - (void)viewDidLoad
@@ -35,8 +37,15 @@
 
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.screenName = @"Main Screen";
+}
+
+
 - (void)viewDidAppear:(BOOL)animated
 {
+    
     [super viewDidAppear:animated];
     
     _adBanner = [[ADBannerView alloc] initWithFrame:CGRectZero];

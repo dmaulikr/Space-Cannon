@@ -9,12 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
 #import <iAd/iAd.h>
+#import "GAITrackedViewController.h"
 
 
-@interface CCViewController : UIViewController <ADBannerViewDelegate> {
+@interface CCViewController : GAITrackedViewController {
     
-//    ADBannerView *adView;
-        ADBannerView *_adBanner;
+    ADBannerView *_adBanner;
     BOOL _bannerIsVisible;
 
 }
@@ -23,5 +23,7 @@
 
 -(void)showsBanner;
 -(void)hidesBanner;
+
+
 
 @end

@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		A0137DBB19A51B660092797F /* GreenCannon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0137DB919A51B660092797F /* GreenCannon@2x.png */; };
 		A0137DBC19A51B660092797F /* MultiShotPowerUp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0137DBA19A51B660092797F /* MultiShotPowerUp@2x.png */; };
-		A022A7F519E9DC8100DCED0D /* Cannon Ball@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = A022A7F219E9DC8100DCED0D /* Cannon Ball@1x.png */; };
-		A022A7F619E9DC8100DCED0D /* Cannon Ball@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A022A7F319E9DC8100DCED0D /* Cannon Ball@2x.png */; };
-		A022A7F719E9DC8100DCED0D /* Cannon Ball@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A022A7F419E9DC8100DCED0D /* Cannon Ball@3x.png */; };
 		A023382D196CF4B700A421CF /* HaloExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = A023382B196CF4B700A421CF /* HaloExplosion.sks */; };
 		A023382E196CF4B700A421CF /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = A023382C196CF4B700A421CF /* spark.png */; };
+		A0296E1E19FD9828001053DE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0296E1D19FD9828001053DE /* CoreData.framework */; };
+		A0296E2019FD9841001053DE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A0296E1F19FD9841001053DE /* libz.dylib */; };
+		A0296E2219FD991B001053DE /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0296E2119FD991B001053DE /* libGoogleAnalyticsServices.a */; };
 		A02D1AE619B6C5A200999426 /* NewEasyButtonAlt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A02D1AE519B6C5A200999426 /* NewEasyButtonAlt@2x.png */; };
 		A02D1AE819B6C5F200999426 /* NewEasyButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A02D1AE719B6C5F200999426 /* NewEasyButton@2x.png */; };
 		A031D9D919AF08600043F8C4 /* MusicOffButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A031D9D719AF08600043F8C4 /* MusicOffButton@2x.png */; };
@@ -22,8 +22,6 @@
 		A031D9E119AF896A0043F8C4 /* CCDifficulty.m in Sources */ = {isa = PBXBuildFile; fileRef = A031D9E019AF896A0043F8C4 /* CCDifficulty.m */; };
 		A045DC1819AA56490011945F /* PauseButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A045DC1619AA56490011945F /* PauseButton@2x.png */; };
 		A045DC1919AA56490011945F /* ResumeButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A045DC1719AA56490011945F /* ResumeButton@2x.png */; };
-		A051890C19DE779D00AD6882 /* dsym_upload.sh in Resources */ = {isa = PBXBuildFile; fileRef = A051890A19DE779D00AD6882 /* dsym_upload.sh */; };
-		A051890D19DE779D00AD6882 /* libCrittercism_v4_3_7.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A051890B19DE779D00AD6882 /* libCrittercism_v4_3_7.a */; };
 		A051890F19DE794400AD6882 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A051890E19DE794400AD6882 /* SystemConfiguration.framework */; };
 		A051891119DF7D6F00AD6882 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A051891019DF7D6F00AD6882 /* GameKit.framework */; };
 		A069D23E19AAB4FE00A55CE9 /* ObservingTheStar.caf in Resources */ = {isa = PBXBuildFile; fileRef = A069D23D19AAB4FE00A55CE9 /* ObservingTheStar.caf */; };
@@ -89,11 +87,20 @@
 /* Begin PBXFileReference section */
 		A0137DB919A51B660092797F /* GreenCannon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GreenCannon@2x.png"; sourceTree = "<group>"; };
 		A0137DBA19A51B660092797F /* MultiShotPowerUp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MultiShotPowerUp@2x.png"; sourceTree = "<group>"; };
-		A022A7F219E9DC8100DCED0D /* Cannon Ball@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Cannon Ball@1x.png"; path = "../../../../Space Cannon New Assets/Cannon Ball@1x.png"; sourceTree = "<group>"; };
-		A022A7F319E9DC8100DCED0D /* Cannon Ball@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Cannon Ball@2x.png"; path = "../../../../Space Cannon New Assets/Cannon Ball@2x.png"; sourceTree = "<group>"; };
-		A022A7F419E9DC8100DCED0D /* Cannon Ball@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Cannon Ball@3x.png"; path = "../../../../Space Cannon New Assets/Cannon Ball@3x.png"; sourceTree = "<group>"; };
 		A023382B196CF4B700A421CF /* HaloExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = HaloExplosion.sks; path = ../HaloExplosion.sks; sourceTree = "<group>"; };
 		A023382C196CF4B700A421CF /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spark.png; path = ../spark.png; sourceTree = "<group>"; };
+		A0296E1419FD96BB001053DE /* GAI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
+		A0296E1519FD96BB001053DE /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
+		A0296E1619FD96BB001053DE /* GAIEcommerceProduct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProduct.h; sourceTree = "<group>"; };
+		A0296E1719FD96BB001053DE /* GAIEcommerceProductAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProductAction.h; sourceTree = "<group>"; };
+		A0296E1819FD96BB001053DE /* GAIEcommercePromotion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAIEcommercePromotion.h; sourceTree = "<group>"; };
+		A0296E1919FD96BB001053DE /* GAIFields.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
+		A0296E1A19FD96BB001053DE /* GAILogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
+		A0296E1B19FD96BB001053DE /* GAITrackedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
+		A0296E1C19FD96BB001053DE /* GAITracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
+		A0296E1D19FD9828001053DE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A0296E1F19FD9841001053DE /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		A0296E2119FD991B001053DE /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = ../../../../Downloads/GoogleAnalyticsServicesiOS_3.09/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		A02D1AE519B6C5A200999426 /* NewEasyButtonAlt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NewEasyButtonAlt@2x.png"; sourceTree = "<group>"; };
 		A02D1AE719B6C5F200999426 /* NewEasyButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NewEasyButton@2x.png"; sourceTree = "<group>"; };
 		A031D9D719AF08600043F8C4 /* MusicOffButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MusicOffButton@2x.png"; sourceTree = "<group>"; };
@@ -104,11 +111,6 @@
 		A031D9E019AF896A0043F8C4 /* CCDifficulty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCDifficulty.m; path = "space-cannon-assets/CCDifficulty.m"; sourceTree = "<group>"; };
 		A045DC1619AA56490011945F /* PauseButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PauseButton@2x.png"; sourceTree = "<group>"; };
 		A045DC1719AA56490011945F /* ResumeButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ResumeButton@2x.png"; sourceTree = "<group>"; };
-		A051890719DE779D00AD6882 /* CRFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRFilter.h; sourceTree = "<group>"; };
-		A051890819DE779D00AD6882 /* Crittercism.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crittercism.h; sourceTree = "<group>"; };
-		A051890919DE779D00AD6882 /* CrittercismDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrittercismDelegate.h; sourceTree = "<group>"; };
-		A051890A19DE779D00AD6882 /* dsym_upload.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = dsym_upload.sh; sourceTree = "<group>"; };
-		A051890B19DE779D00AD6882 /* libCrittercism_v4_3_7.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCrittercism_v4_3_7.a; sourceTree = "<group>"; };
 		A051890E19DE794400AD6882 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A051891019DF7D6F00AD6882 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		A069D23D19AAB4FE00A55CE9 /* ObservingTheStar.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ObservingTheStar.caf; sourceTree = "<group>"; };
@@ -175,8 +177,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0296E2019FD9841001053DE /* libz.dylib in Frameworks */,
 				A051890F19DE794400AD6882 /* SystemConfiguration.framework in Frameworks */,
-				A051890D19DE779D00AD6882 /* libCrittercism_v4_3_7.a in Frameworks */,
+				A0296E1E19FD9828001053DE /* CoreData.framework in Frameworks */,
+				A0296E2219FD991B001053DE /* libGoogleAnalyticsServices.a in Frameworks */,
 				A031D9DC19AF80E20043F8C4 /* iAd.framework in Frameworks */,
 				A0DBCD36191EBAA400B8B292 /* CoreGraphics.framework in Frameworks */,
 				A0DBCD38191EBAA400B8B292 /* UIKit.framework in Frameworks */,
@@ -199,26 +203,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A022A7F119E9DC7200DCED0D /* New Assets */ = {
+		A0296E1319FD9681001053DE /* Google Analytics */ = {
 			isa = PBXGroup;
 			children = (
-				A022A7F219E9DC8100DCED0D /* Cannon Ball@1x.png */,
-				A022A7F319E9DC8100DCED0D /* Cannon Ball@2x.png */,
-				A022A7F419E9DC8100DCED0D /* Cannon Ball@3x.png */,
+				A0296E1419FD96BB001053DE /* GAI.h */,
+				A0296E1519FD96BB001053DE /* GAIDictionaryBuilder.h */,
+				A0296E1619FD96BB001053DE /* GAIEcommerceProduct.h */,
+				A0296E1719FD96BB001053DE /* GAIEcommerceProductAction.h */,
+				A0296E1819FD96BB001053DE /* GAIEcommercePromotion.h */,
+				A0296E1919FD96BB001053DE /* GAIFields.h */,
+				A0296E1A19FD96BB001053DE /* GAILogger.h */,
+				A0296E1B19FD96BB001053DE /* GAITrackedViewController.h */,
+				A0296E1C19FD96BB001053DE /* GAITracker.h */,
+				A0296E2119FD991B001053DE /* libGoogleAnalyticsServices.a */,
 			);
-			name = "New Assets";
-			sourceTree = "<group>";
-		};
-		A051890619DE779D00AD6882 /* CrittercismSDK */ = {
-			isa = PBXGroup;
-			children = (
-				A051890719DE779D00AD6882 /* CRFilter.h */,
-				A051890819DE779D00AD6882 /* Crittercism.h */,
-				A051890919DE779D00AD6882 /* CrittercismDelegate.h */,
-				A051890A19DE779D00AD6882 /* dsym_upload.sh */,
-				A051890B19DE779D00AD6882 /* libCrittercism_v4_3_7.a */,
-			);
-			path = CrittercismSDK;
+			name = "Google Analytics";
+			path = "Space Cannon";
 			sourceTree = "<group>";
 		};
 		A069D23F19AAB57200A55CE9 /* Music */ = {
@@ -274,10 +274,10 @@
 			isa = PBXGroup;
 			children = (
 				A0DBCD3B191EBAA400B8B292 /* Space Cannon */,
+				A0296E1319FD9681001053DE /* Google Analytics */,
 				A0DBCD5F191EBAA400B8B292 /* Space CannonTests */,
 				A0DBCD32191EBAA300B8B292 /* Frameworks */,
 				A0DBCD31191EBAA300B8B292 /* Products */,
-				A051890619DE779D00AD6882 /* CrittercismSDK */,
 			);
 			sourceTree = "<group>";
 		};
@@ -293,6 +293,8 @@
 		A0DBCD32191EBAA300B8B292 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A0296E1F19FD9841001053DE /* libz.dylib */,
+				A0296E1D19FD9828001053DE /* CoreData.framework */,
 				A051891019DF7D6F00AD6882 /* GameKit.framework */,
 				A051890E19DE794400AD6882 /* SystemConfiguration.framework */,
 				A031D9DD19AF80EA0043F8C4 /* AVFoundation.framework */,
@@ -364,7 +366,6 @@
 		A0DBCD6F191EBBBD00B8B292 /* Space Cannon Assets */ = {
 			isa = PBXGroup;
 			children = (
-				A022A7F119E9DC7200DCED0D /* New Assets */,
 				A069D23F19AAB57200A55CE9 /* Music */,
 				A0730C921974E5FD0065BC8F /* Menu */,
 				A0E64710197370CF008F7C05 /* Animations */,
@@ -492,9 +493,7 @@
 				A0DBCD40191EBAA400B8B292 /* InfoPlist.strings in Resources */,
 				A0137DBB19A51B660092797F /* GreenCannon@2x.png in Resources */,
 				A0A46482199FF73600281233 /* HaloX@2x.png in Resources */,
-				A022A7F719E9DC8100DCED0D /* Cannon Ball@3x.png in Resources */,
 				A0E64717197370E8008F7C05 /* DeepExplosion.caf in Resources */,
-				A022A7F619E9DC8100DCED0D /* Cannon Ball@2x.png in Resources */,
 				A0DBCD81191EBBBD00B8B292 /* Ammo5@2x.png in Resources */,
 				A0A3128919B583F1005A2665 /* TestButton@2x.png in Resources */,
 				A0DBCD7D191EBBBD00B8B292 /* Ammo1@2x.png in Resources */,
@@ -502,7 +501,6 @@
 				A02D1AE819B6C5F200999426 /* NewEasyButton@2x.png in Resources */,
 				A023382D196CF4B700A421CF /* HaloExplosion.sks in Resources */,
 				A0E64719197370E8008F7C05 /* Laser.caf in Resources */,
-				A051890C19DE779D00AD6882 /* dsym_upload.sh in Resources */,
 				A0AA346819A31B63004C3B19 /* ShieldUp.caf in Resources */,
 				A0DBCD82191EBBBD00B8B292 /* Ball@2x.png in Resources */,
 				A0DBCD53191EBAA400B8B292 /* Images.xcassets in Resources */,
@@ -512,7 +510,6 @@
 				A0DBCD49191EBAA400B8B292 /* Main.storyboard in Resources */,
 				A0E64718197370E8008F7C05 /* Explosion.caf in Resources */,
 				A069D23E19AAB4FE00A55CE9 /* ObservingTheStar.caf in Resources */,
-				A022A7F519E9DC8100DCED0D /* Cannon Ball@1x.png in Resources */,
 				A0DBCD7C191EBBBD00B8B292 /* Ammo0@2x.png in Resources */,
 				A045DC1919AA56490011945F /* ResumeButton@2x.png in Resources */,
 				A0DBCD7E191EBBBD00B8B292 /* Ammo2@2x.png in Resources */,
@@ -693,8 +690,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/CrittercismSDK",
+					/Users/Raghav/Downloads/GoogleAnalyticsServicesiOS_3.09,
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
@@ -718,8 +716,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/CrittercismSDK",
+					/Users/Raghav/Downloads/GoogleAnalyticsServicesiOS_3.09,
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;

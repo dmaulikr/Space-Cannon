@@ -14,7 +14,7 @@
 		<string>ssh://bitbucket.org/RaghavM/space-cannon.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Space Cannon.xcodeproj/project.xcworkspace</string>
+	<string>Space Cannon.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>158C092C4F51D839C79DDE603B5749E88FC0E30F</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>158C092C4F51D839C79DDE603B5749E88FC0E30F</string>
 			<key>IDESourceControlWCCName</key>
-			<string>space-cannon</string>
+			<string>Space%20Cannon</string>
 		</dict>
 	</array>
 </dict>
