@@ -433,7 +433,7 @@ static inline CGFloat randomInRange(CGFloat low, CGFloat high)
 -(void)shoot
 {
     // Create ball node.
-    CCBall *ball = [CCBall spriteNodeWithImageNamed:@"Ball"];
+    CCBall *ball = [CCBall spriteNodeWithImageNamed:@"Cannon Ball"];
     ball.name = @"ball";
     CGVector rotationVector = radiansToVector(_cannon.zRotation);
     ball.position = CGPointMake(_cannon.position.x + (_cannon.size.width * 0.5 * rotationVector.dx),

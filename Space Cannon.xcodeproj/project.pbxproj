@@ -13,13 +13,13 @@
 		A023382E196CF4B700A421CF /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = A023382C196CF4B700A421CF /* spark.png */; };
 		A0296E1E19FD9828001053DE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0296E1D19FD9828001053DE /* CoreData.framework */; };
 		A0296E2019FD9841001053DE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A0296E1F19FD9841001053DE /* libz.dylib */; };
-		A0296E2219FD991B001053DE /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0296E2119FD991B001053DE /* libGoogleAnalyticsServices.a */; };
 		A02D1AE619B6C5A200999426 /* NewEasyButtonAlt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A02D1AE519B6C5A200999426 /* NewEasyButtonAlt@2x.png */; };
 		A02D1AE819B6C5F200999426 /* NewEasyButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A02D1AE719B6C5F200999426 /* NewEasyButton@2x.png */; };
 		A031D9D919AF08600043F8C4 /* MusicOffButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A031D9D719AF08600043F8C4 /* MusicOffButton@2x.png */; };
 		A031D9DA19AF08600043F8C4 /* MusicOnButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A031D9D819AF08600043F8C4 /* MusicOnButton@2x.png */; };
 		A031D9DC19AF80E20043F8C4 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A031D9DB19AF80E20043F8C4 /* iAd.framework */; };
 		A031D9E119AF896A0043F8C4 /* CCDifficulty.m in Sources */ = {isa = PBXBuildFile; fileRef = A031D9E019AF896A0043F8C4 /* CCDifficulty.m */; };
+		A035E49619FE9B8F0093B736 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A035E49519FE9B8F0093B736 /* libGoogleAnalyticsServices.a */; };
 		A045DC1819AA56490011945F /* PauseButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A045DC1619AA56490011945F /* PauseButton@2x.png */; };
 		A045DC1919AA56490011945F /* ResumeButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A045DC1719AA56490011945F /* ResumeButton@2x.png */; };
 		A051890F19DE794400AD6882 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A051890E19DE794400AD6882 /* SystemConfiguration.framework */; };
@@ -34,6 +34,7 @@
 		A0A46482199FF73600281233 /* HaloX@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0A46481199FF73600281233 /* HaloX@2x.png */; };
 		A0A4648419A05D2000281233 /* HaloBomb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0A4648319A05D2000281233 /* HaloBomb@2x.png */; };
 		A0AA346819A31B63004C3B19 /* ShieldUp.caf in Resources */ = {isa = PBXBuildFile; fileRef = A0AA346719A31B63004C3B19 /* ShieldUp.caf */; };
+		A0B3F61619FDCCCE001C3844 /* Cannon Ball@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0B3F61519FDCCCE001C3844 /* Cannon Ball@2x.png */; };
 		A0B84E0219987AA000C90567 /* CCBall.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B84E0119987AA000C90567 /* CCBall.m */; };
 		A0D12306199867F200DF1BCF /* BallTrail.sks in Resources */ = {isa = PBXBuildFile; fileRef = A0D12305199867F200DF1BCF /* BallTrail.sks */; };
 		A0DBCD34191EBAA300B8B292 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0DBCD33191EBAA300B8B292 /* Foundation.framework */; };
@@ -100,7 +101,6 @@
 		A0296E1C19FD96BB001053DE /* GAITracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
 		A0296E1D19FD9828001053DE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A0296E1F19FD9841001053DE /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		A0296E2119FD991B001053DE /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = ../../../../Downloads/GoogleAnalyticsServicesiOS_3.09/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		A02D1AE519B6C5A200999426 /* NewEasyButtonAlt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NewEasyButtonAlt@2x.png"; sourceTree = "<group>"; };
 		A02D1AE719B6C5F200999426 /* NewEasyButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NewEasyButton@2x.png"; sourceTree = "<group>"; };
 		A031D9D719AF08600043F8C4 /* MusicOffButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MusicOffButton@2x.png"; sourceTree = "<group>"; };
@@ -109,6 +109,7 @@
 		A031D9DD19AF80EA0043F8C4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A031D9DF19AF896A0043F8C4 /* CCDifficulty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCDifficulty.h; path = "space-cannon-assets/CCDifficulty.h"; sourceTree = "<group>"; };
 		A031D9E019AF896A0043F8C4 /* CCDifficulty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCDifficulty.m; path = "space-cannon-assets/CCDifficulty.m"; sourceTree = "<group>"; };
+		A035E49519FE9B8F0093B736 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		A045DC1619AA56490011945F /* PauseButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PauseButton@2x.png"; sourceTree = "<group>"; };
 		A045DC1719AA56490011945F /* ResumeButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ResumeButton@2x.png"; sourceTree = "<group>"; };
 		A051890E19DE794400AD6882 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -124,6 +125,7 @@
 		A0A46481199FF73600281233 /* HaloX@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HaloX@2x.png"; sourceTree = "<group>"; };
 		A0A4648319A05D2000281233 /* HaloBomb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HaloBomb@2x.png"; sourceTree = "<group>"; };
 		A0AA346719A31B63004C3B19 /* ShieldUp.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ShieldUp.caf; sourceTree = "<group>"; };
+		A0B3F61519FDCCCE001C3844 /* Cannon Ball@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Cannon Ball@2x.png"; path = "../../../Space Cannon New Assets/Cannon Ball@2x.png"; sourceTree = "<group>"; };
 		A0B84E0019987AA000C90567 /* CCBall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCBall.h; path = "space-cannon-assets/CCBall.h"; sourceTree = "<group>"; };
 		A0B84E0119987AA000C90567 /* CCBall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCBall.m; path = "space-cannon-assets/CCBall.m"; sourceTree = "<group>"; };
 		A0D12305199867F200DF1BCF /* BallTrail.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BallTrail.sks; sourceTree = "<group>"; };
@@ -180,7 +182,7 @@
 				A0296E2019FD9841001053DE /* libz.dylib in Frameworks */,
 				A051890F19DE794400AD6882 /* SystemConfiguration.framework in Frameworks */,
 				A0296E1E19FD9828001053DE /* CoreData.framework in Frameworks */,
-				A0296E2219FD991B001053DE /* libGoogleAnalyticsServices.a in Frameworks */,
+				A035E49619FE9B8F0093B736 /* libGoogleAnalyticsServices.a in Frameworks */,
 				A031D9DC19AF80E20043F8C4 /* iAd.framework in Frameworks */,
 				A0DBCD36191EBAA400B8B292 /* CoreGraphics.framework in Frameworks */,
 				A0DBCD38191EBAA400B8B292 /* UIKit.framework in Frameworks */,
@@ -215,7 +217,7 @@
 				A0296E1A19FD96BB001053DE /* GAILogger.h */,
 				A0296E1B19FD96BB001053DE /* GAITrackedViewController.h */,
 				A0296E1C19FD96BB001053DE /* GAITracker.h */,
-				A0296E2119FD991B001053DE /* libGoogleAnalyticsServices.a */,
+				A035E49519FE9B8F0093B736 /* libGoogleAnalyticsServices.a */,
 			);
 			name = "Google Analytics";
 			path = "Space Cannon";
@@ -268,6 +270,14 @@
 				A0DBCD7B191EBBBD00B8B292 /* Starfield@2x.png */,
 			);
 			name = "Other Assets";
+			sourceTree = "<group>";
+		};
+		A0B3F61219FDCA66001C3844 /* Test Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A0B3F61519FDCCCE001C3844 /* Cannon Ball@2x.png */,
+			);
+			name = "Test Assets";
 			sourceTree = "<group>";
 		};
 		A0DBCD27191EBAA300B8B292 = {
@@ -366,6 +376,7 @@
 		A0DBCD6F191EBBBD00B8B292 /* Space Cannon Assets */ = {
 			isa = PBXGroup;
 			children = (
+				A0B3F61219FDCA66001C3844 /* Test Assets */,
 				A069D23F19AAB57200A55CE9 /* Music */,
 				A0730C921974E5FD0065BC8F /* Menu */,
 				A0E64710197370CF008F7C05 /* Animations */,
@@ -511,6 +522,7 @@
 				A0E64718197370E8008F7C05 /* Explosion.caf in Resources */,
 				A069D23E19AAB4FE00A55CE9 /* ObservingTheStar.caf in Resources */,
 				A0DBCD7C191EBBBD00B8B292 /* Ammo0@2x.png in Resources */,
+				A0B3F61619FDCCCE001C3844 /* Cannon Ball@2x.png in Resources */,
 				A045DC1919AA56490011945F /* ResumeButton@2x.png in Resources */,
 				A0DBCD7E191EBBBD00B8B292 /* Ammo2@2x.png in Resources */,
 				A0DBCD83191EBBBD00B8B292 /* Block@2x.png in Resources */,
@@ -691,6 +703,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/Raghav/Downloads/GoogleAnalyticsServicesiOS_3.09,
+					"$(PROJECT_DIR)/Space",
+					Cannon,
+					"$(PROJECT_DIR)/Space",
+					Cannon,
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -717,6 +733,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/Raghav/Downloads/GoogleAnalyticsServicesiOS_3.09,
+					"$(PROJECT_DIR)/Space",
+					Cannon,
+					"$(PROJECT_DIR)/Space",
+					Cannon,
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";

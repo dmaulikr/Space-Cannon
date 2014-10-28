@@ -69,19 +69,11 @@
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 
-//    SKView* view = [self getSKViewSubview];
     SKView *view = (SKView*)self.window.rootViewController.view;
     ((CCMyScene*)view.scene).gamePaused = YES;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidBecomeActive:) name:UIApplicationDidEnterBackgroundNotification object:nil];
     
-    // Prevent Audio Crash
-//    [self deactivateAudioSession];
-    
-//    [[AVAudioSession sharedInstance] setActive:NO error:nil];
-    
-//    SKView *view = (SKView*)self.window.rootViewController.view;
-//    view.paused = YES;
     
 
 
@@ -91,7 +83,6 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-//    [[AVAudioSession sharedInstance] setActive:YES error:nil];
     [self activateAudioSession];
     
 }
@@ -99,15 +90,8 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-//    SKView *view = (SKView*)self.window.rootViewController.view;
-//    view.paused = YES;
-//    [[AVAudioSession sharedInstance] setActive:YES error:nil];
-
     
-
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidEnterBackground:) name:UIApplicationDidBecomeActiveNotification object:nil];
-    
-//    [self activateAudioSession];
     
 }
 
