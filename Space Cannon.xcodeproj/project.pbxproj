@@ -700,14 +700,7 @@
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INFOPLIST_FILE = "Space Cannon/Space Cannon-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/Raghav/Downloads/GoogleAnalyticsServicesiOS_3.09,
-					"$(PROJECT_DIR)/Space",
-					Cannon,
-					"$(PROJECT_DIR)/Space",
-					Cannon,
-				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Space\\ Cannon";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -730,14 +723,7 @@
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INFOPLIST_FILE = "Space Cannon/Space Cannon-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/Raghav/Downloads/GoogleAnalyticsServicesiOS_3.09,
-					"$(PROJECT_DIR)/Space",
-					Cannon,
-					"$(PROJECT_DIR)/Space",
-					Cannon,
-				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Space\\ Cannon";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

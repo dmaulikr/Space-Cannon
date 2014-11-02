@@ -12,6 +12,8 @@
 	<dict>
 		<key>158C092C4F51D839C79DDE603B5749E88FC0E30F</key>
 		<string>ssh://bitbucket.org/RaghavM/space-cannon.git</string>
+		<key>A21E964CF35F95307B1FB121F2B5F3025ACF2ED9</key>
+		<string>http://github.com/kstenerud/ObjectAL-for-iPhone.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Space Cannon.xcodeproj</string>
@@ -19,6 +21,8 @@
 	<dict>
 		<key>158C092C4F51D839C79DDE603B5749E88FC0E30F</key>
 		<string>../..</string>
+		<key>A21E964CF35F95307B1FB121F2B5F3025ACF2ED9</key>
+		<string>../../ObjectAL-for-iPhone</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>ssh://bitbucket.org/RaghavM/space-cannon.git</string>
@@ -28,6 +32,14 @@
 	<string>158C092C4F51D839C79DDE603B5749E88FC0E30F</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A21E964CF35F95307B1FB121F2B5F3025ACF2ED9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ObjectAL-for-iPhone</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
